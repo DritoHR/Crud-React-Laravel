@@ -1,0 +1,30 @@
+.survey-container {
+    background: #F5F5F5;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.survey-inner {
+    max-width: 700px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.survey-form {
+    text-align: left;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.btn-right {
+    text-align: right;
+    flex-grow: 1; 
+}
