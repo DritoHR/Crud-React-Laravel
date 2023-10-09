@@ -41,7 +41,7 @@ const SurveyForm = () => {
     
             setShowAlert(true);
             setAlertType('success');
-            setAlertMessage('Encuesta creada exitosamente!');
+            setAlertMessage('Survey created sucessfully!');
             setTimeout(() => {
                 setShowAlert(false);
             }, 3000);
