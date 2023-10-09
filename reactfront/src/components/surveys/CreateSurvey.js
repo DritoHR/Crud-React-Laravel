@@ -51,12 +51,12 @@ const SurveyForm = () => {
                 const backendErrors = error.response.data.errors;
                 setErrors(adaptBackendErrors(backendErrors));
             } else {
-                console.error("Hubo un error al enviar los datos", error);
-                setErrors({ general: 'Ocurrió un error inesperado. Por favor, inténtalo de nuevo.' });
+                console.error("There was an error sending data.", error);
+                setErrors({ general: 'An unexpected error occurred. Please try again.' });
     
                 setShowAlert(true);
                 setAlertType('danger');
-                setAlertMessage('Ocurrió un error inesperado. Por favor, inténtalo de nuevo.');
+                setAlertMessage('An unexpected error occurred. Please try again.');
                 setTimeout(() => {
                     setShowAlert(false);
                 }, 3000);
