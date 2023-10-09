@@ -17,42 +17,42 @@ export const validateFields = (formData, setErrors) => {
         tempErrors.customer_dni = "DNI es requerido";
     } else if (!isValidDNI(formData.customer_dni)) {
         valid = false;
-        tempErrors.customer_dni = "DNI no válido";
+        tempErrors.customer_dni = "Invalid ID format.";
     }
     
     if (!(formData.product ? formData.product.trim() : "")) {
         valid = false;
-        tempErrors.product = "Producto es requerido";
+        tempErrors.product = "Product is required";
     }
     
     if (!(formData.subproduct ? formData.subproduct.trim() : "")) {
         valid = false;
-        tempErrors.subproduct = "Subproducto es requerido";
+        tempErrors.subproduct = "Subproduct is required";
     }
     
     if (formData.product === 'DUAL' && !(formData.subproduct_gas ? formData.subproduct_gas.trim() : "")) {
         valid = false;
-        tempErrors.subproductGas = "Subproducto GAS es requerido";
+        tempErrors.subproductGas = "GAS subproduct is required";
     }
     
     if ((formData.product === 'LUZ' || formData.product === 'GAS') && !(formData.maintenance ? formData.maintenance.trim() : "")) {
         valid = false;
-        tempErrors.maintenance = "Mantenimiento es requerido";
+        tempErrors.maintenance = "Maintenance is required.";
     }
     
     if (formData.product === 'DUAL' && !(formData.maintenance_light ? formData.maintenance_light.trim() : "")) {
         valid = false;
-        tempErrors.maintenanceLight = "Mantenimiento LUZ es requerido";
+        tempErrors.maintenanceLight = "Light maintenance is required.";
     }
     
     if (formData.product === 'DUAL' && !(formData.maintenance_gas ? formData.maintenance_gas.trim() : "")) {
         valid = false;
-        tempErrors.maintenanceGas = "Mantenimiento GAS es requerido";
+        tempErrors.maintenanceGas = "Gas maintenance is required.";
     }
     
     if (!(formData.state ? formData.state.trim() : "")) {
         valid = false;
-        tempErrors.state = "Estado es requerido";
+        tempErrors.state = "State is required";
     }
     
     setErrors(tempErrors);
